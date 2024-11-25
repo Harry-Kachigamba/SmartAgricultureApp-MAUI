@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartAgricultureApp_MAUI.MainPage"
+             BackgroundColor="#6A9347"
+             Title="Selection Page">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="10">
+                <VerticalStackLayout Padding="20"
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="Center">
+                
+                    <Label Text="Sections"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           Margin="0, 20, 0, 0"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            
+                <Button Text="Moisture"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        FontSize="15"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500"
+                        ImageSource="water.svg"
+                        Clicked="OnClickedMoistureButton" />
+                
+                <Button Text="Temperature"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        FontSize="15"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500"
+                        ImageSource="thermometer.svg"
+                        Clicked="OnClickedTemperatureButton" />
+                
+                <Button Text="Humidity"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        FontSize="15"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500"
+                        ImageSource="humidity.svg"
+                        Clicked="OnClickedHumidityButton" />
+                
+                <Button Text="Plant Health"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        FontSize="15"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500"
+                        ImageSource="leaf.svg"
+                        Clicked="OnClickedPlantHealthButton" />
+                
+                <Button Text="Notification"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        FontSize="15"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500"
+                        ImageSource="notification.svg"
+                        Clicked="OnClickedNotificationButton" />
+                
+                <Button Text="History"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        FontSize="15"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500"
+                        ImageSource="history.svg"
+                        Clicked="OnClickedHistoryButton" />
+                
+                <Label Text="Signout?"
+                       Padding="20"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnClickedSignout"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                </Label>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

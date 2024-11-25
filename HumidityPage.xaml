@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartAgricultureApp_MAUI.HumidityPage"
+             BackgroundColor="#6A9347"
+             Title="Humidity Page">
+    
+    <VerticalStackLayout>
+        <Label Text="Recent Humidity"
+               FontSize="20"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0,250,0,0" />
+
+        <Label x:Name="HumidityLabel"
+               Text="Loading... g/m3"
+               FontSize="50"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Margin="0,50,0,0" />
+    </VerticalStackLayout>
+</ContentPage>

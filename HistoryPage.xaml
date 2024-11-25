@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartAgricultureApp_MAUI.HistoryPage"
+             BackgroundColor="#6a9347"
+             Title="History Page">
+    
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Recent Temperatures:"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Padding="20" />
+
+            <ListView x:Name="TemperatureListView"
+                      VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding .}"
+                                  TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Recent Humidity:"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Padding="0,50,0,0" />
+
+            <ListView x:Name="HumidityListView"
+                      VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding .}"
+                                  TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+
+            <Label Text="Recent Moisture:"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Padding="0,50,0,0" />
+
+            <ListView x:Name="MoistureListView"
+                      VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding .}"
+                                  TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

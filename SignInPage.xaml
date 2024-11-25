@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartAgricultureApp_MAUI.SignInPage"
+             BackgroundColor="#6A9347"
+             Title="SignIn Page">
+    
+    <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="10">
+
+                <VerticalStackLayout Padding="20,0,0,0"
+                                     HorizontalOptions="Center">
+                    <!-- Title -->
+                    <Label Text="Login to Account"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           Margin="30" />
+                </VerticalStackLayout>
+
+                <!-- Email Entry -->
+                <Frame CornerRadius="10"
+                       Padding="0"
+                       BackgroundColor="#D5E8D4"
+                       HasShadow="False"
+                       HeightRequest="50"
+                       WidthRequest="500">
+                    <Entry x:Name="LoginEmailEntry"
+                           Placeholder="Enter your Email"
+                           BackgroundColor="Transparent"
+                           Margin="10,0" />
+                </Frame>
+
+                <!-- Password Entry -->
+                <Frame CornerRadius="10"
+                       Padding="0"
+                       BackgroundColor="#D5E8D4"
+                       HasShadow="False"
+                       HeightRequest="50"
+                       WidthRequest="500">
+                    <Entry x:Name="LoginPasswordEntry"
+                           Placeholder="Enter your Password"
+                           IsPassword="True"
+                           BackgroundColor="Transparent"
+                           HeightRequest="50"
+                           WidthRequest="500"
+                           Margin="10,0" /> 
+                </Frame>
+
+                <!-- Login Button -->
+                <Button Text="Login"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500"
+                        Clicked="OnLoginButtonClicked"/> 
+
+                <!-- Divider with OR -->
+                <HorizontalStackLayout Margin="10" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="OR" />
+                </HorizontalStackLayout>
+
+                <!-- Social Media Sign-In Buttons -->
+                <Button Text="Sign in with Google"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500" /> 
+
+                <Button Text="Sign in with Facebook"
+                        BackgroundColor="#FF9900"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        WidthRequest="500" /> 
+
+                <!-- Create Account Link -->
+                <Label Text="Don't have an account? Create Account"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End"
+                       TextColor="White"
+                       FontAttributes="Italic"
+                       Margin="30"> 
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSignUpTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>

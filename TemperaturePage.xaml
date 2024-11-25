@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartAgricultureApp_MAUI.TemperaturePage"
+             BackgroundColor="#6A9347"
+             Title="Temperature Page">
+    
+    <VerticalStackLayout>
+        <Label Text="Recent Temperature"
+               FontSize="20"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0, 250, 0, 0" />
+        
+        <Label x:Name="TemperatureLabel"
+               Text="Loading... °C"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Margin="0, 50, 0, 0" />
+    </VerticalStackLayout>
+</ContentPage>

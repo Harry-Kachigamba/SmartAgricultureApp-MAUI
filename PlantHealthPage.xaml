@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartAgricultureApp_MAUI.PlantHealthPage"
+             BackgroundColor="#6A9347"
+             Title="Plant Health Page">
+    
+    <StackLayout Padding="20">
+        <Button Text="Select Image"
+                BackgroundColor="#FF9900"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50"
+                WidthRequest="500"
+                Margin="10"
+                Clicked="OnSelectedImageClicked"
+                HorizontalOptions="Center" />
+
+        <Image x:Name="SelectedImage"
+               WidthRequest="224"
+               HeightRequest="224"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <Button Text="Predict"
+                BackgroundColor="#FF9900"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50"
+                WidthRequest="500"
+                Margin="10"
+                Clicked="OnPredictClicked"
+                HorizontalOptions="Center" />
+
+        <Label x:Name="PredictionResult"
+               Text="Prediction will appear here"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>
